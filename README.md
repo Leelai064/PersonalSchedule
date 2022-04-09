@@ -1,1 +1,1 @@
-# PersonalSchedule
+# PersonalScheduler
