@@ -30,7 +30,6 @@ var SixPm = $("#18");
 var SevenPm = $("#19");
 var EightPm = $("#20");
 
-
 var UserInput;
 var hourlength
 
@@ -40,7 +39,7 @@ var currentdate = moment().format('dddd') + "" + moment().format("D MM YYYY");
 
 
 //Background
-function pagedesign(){
+function Backgroundpush(){
     var timelog =parseInt($(this).attr("id"));
     hour = parseInt(hour);
     console.log(hour);
@@ -113,24 +112,23 @@ var interval = setInterval(function(){
     $('#current').html(currentdate + " " + currentmoment.format('hh:mm:ss A'));
 
 }
-
-
+// for loop
 
 //If user wants to refresh/clear their planner
 
-$("refresh-page").on("click",function(){
-    localStorage.clear();
-    initPage();
-})
-
 $(document).ready(function(){
-    initPage()
-    pagedesign()
+    initPage();
+    pagedesign();
 
     $(".saveBtn").on("click", function(){
         user-input = $(this).siblings(".form-control").val().trim();
         console.log(user-input);
         hourlength = $(this).siblings(".input-group-prepend").text().trim();
-        console(hourlength)
+        console(hourlength);
+        localStorage.setItem(hourlength, JSON.stringfy(userInput))
     }
-    )}
+    $("refresh-page").on("click",function(){
+        localStorage.clear();
+        initPage();
+    })
+    }
