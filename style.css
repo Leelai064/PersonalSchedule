@@ -1,7 +1,8 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family:'Courier New', Courier, monospace;
   font-size: 16px;
   line-height: 1;
+  background-color: #bed1e6;
 }
 
 textarea {
@@ -19,7 +20,7 @@ textarea {
   background-color: transparent;
   color: black;
   border-radius: 0;
-  border-bottom: 10px solid black;
+  border-bottom: 2px solid rgb(59, 59, 59);
 }
 
 .description {
@@ -63,7 +64,7 @@ textarea {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06aed5;
+  background-color: #4e89cc;
   color: white;
 }
 
