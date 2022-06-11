@@ -14,7 +14,7 @@ https://github.com/Leelai064/PersonalScheduler
 ```
 ## Website Visual Examples
 
-![Website](./assets/plannerwebsite.png)
+![Website](./assets/PersonalPlanner.png)
 
 ## Credits
 
