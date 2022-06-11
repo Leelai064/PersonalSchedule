@@ -27,7 +27,8 @@ var currentTime = moment().format('h:mm:ss a');
 
 function Background(){
     
-    $('.time-block').each(function(){
+    $('.form-control').each(function(){
+        var currentTime = parseInt($(this).attr('id'));
         if(currentTime === hourlog){
             $(this).addClass('present');
         }else
