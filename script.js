@@ -8,7 +8,7 @@ var hourlog = moment().hours();
 
 var Savedata = $('.saveBtn'); //A save button variable that we will call later to tie to our eventlistner function
 
-var CurrentDay= moment().format('[Today is] dddd, MMMM Do YYYY, ' + 'h:mm:ss a'); 
+var CurrentDay= moment().format('[Today is] dddd, MMMM Do YYYY, ' + 'h:mm:ss a'); //Will display at the top of my planner
 var currentTime = moment().format('h:mm:ss a');
     console.log(currentTime);
 
@@ -23,13 +23,13 @@ function Background(){
 
     $('.form-control').each(function(){
         var currentTime = parseInt($(this).attr('id'));
-        if(currentTime === hourlog){
+        if(currentTime === hourlog){ //if the currentTime scritcly equals the hourlog display present css settings on .form-control
             $(this).addClass('present');
         }else
-        if (currentTime > hourlog){
+        if (currentTime > hourlog){ //if the currentTime is greater than hourlog display future css settings on .form-control
             $(this).addClass('future');
         }else
-        if(currentTime < hourlog){
+        if(currentTime < hourlog){ //if the currentTime is less than hourlog display past css settings on .form-control
             $(this).addClass('past');
         }
 
