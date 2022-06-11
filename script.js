@@ -54,20 +54,23 @@ Savedata.on("click",function(event){
 // THEN the saved events persist
 
 function getlocalstorage(){
-    console.log($(".hourlog"))
+    // console.log($(".hourlog"))
     $('.hourlog').each(function(){
         var scheduledTime= $(this).text();
         // console.log(scheduledTime);
         var schedule = localStorage.getItem(scheduledTime); //w3schools explained getItem localstorage well
-        console.log(schedule);
+        // console.log(schedule);
     if (schedule !== null){
         $(this).siblings('.form-control').val(schedule);
-        console.log($(this).siblings('.form-control'));
+        // console.log($(this).siblings('.form-control'));
     }
     
     });
 
 }
+$('#timewipe').on("click",function(){
+    localStorage.clear();
+});
 
 Background();
 getlocalstorage();
